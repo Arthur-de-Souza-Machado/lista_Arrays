@@ -6,11 +6,19 @@
     //Apresente a lista antiga de SUVs e a nova lista, após a remoção do veículo solicitado.
 
     //ENTRADA
-
+    let carroRemover = prompt("Digite o nome do carro que você deseja remover da lista (Tiggo, Sportage, Tucson, EcoSport):");
 
     //PROCESSAMENTO
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let index = carrosSUV.indexOf(carroRemover);
 
-
+    if (index !== -1) {
+        carrosSUV.splice(index, 1);
+        alert(`Lista antiga de SUVs:`, carrosSUV.join(", "));
+        alert(`Nova lista de SUVs após a remoção:`, carrosSUV.join(", "));
+    } else {
+        alert(`Caracter invalido!`);
+    }
     //SAÍDA
 
 </script>
