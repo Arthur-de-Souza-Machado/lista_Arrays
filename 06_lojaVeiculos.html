@@ -4,15 +4,46 @@
     // let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
     // let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
     // let carrosHatch = ["308", "Focus", "i30"];
-    
+
     //Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
 
     //Apresente a lista final de cada tipo de veículo.
 
-    //ENTRADA
+    // ENTRADA
 
+    // Arrays iniciais
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
 
-    //PROCESSAMENTO
+    function adicionarVeiculo(tipo, novoVeiculo) {
+        if (tipo === "SUV") {
+            carrosSUV.push(novoVeiculo);
+        } else if (tipo === "Sedan") {
+            carrosSedan.push(novoVeiculo);
+        } else if (tipo === "Hatch") {
+            carrosHatch.push(novoVeiculo);
+        } else {
+            console.log("Tipo de veículo inválido.");
+        }
+    }
+
+    let tipoVeiculo1 = prompt("Informe o tipo de veículo para o primeiro veículo (SUV, Sedan ou Hatch):").toUpperCase();
+    let novoVeiculo1 = prompt(`Informe o nome do primeiro veículo ${tipoVeiculo1}:`);
+    adicionarVeiculo(tipoVeiculo1, novoVeiculo1);
+
+    let tipoVeiculo2 = prompt("Informe o tipo de veículo para o segundo veículo (SUV, Sedan ou Hatch):").toUpperCase();
+    let novoVeiculo2 = prompt(`Informe o nome do segundo veículo ${tipoVeiculo2}:`);
+    adicionarVeiculo(tipoVeiculo2, novoVeiculo2);
+
+    let tipoVeiculo3 = prompt("Informe o tipo de veículo para o terceiro veículo (SUV, Sedan ou Hatch):").toUpperCase();
+    let novoVeiculo3 = prompt(`Informe o nome do terceiro veículo ${tipoVeiculo3}:`);
+    adicionarVeiculo(tipoVeiculo3, novoVeiculo3);
+o
+    console.log("Carros SUV:", carrosSUV);
+    console.log("Carros Sedan:", carrosSedan);
+    console.log("Carros Hatch:", carrosHatch);
+
 
 
     //SAÍDA

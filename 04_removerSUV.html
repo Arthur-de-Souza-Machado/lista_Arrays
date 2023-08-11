@@ -10,14 +10,14 @@
 
     //PROCESSAMENTO
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-    let index = carrosSUV.indexOf(carroRemover);
+    let carrosSUVNovo = carrosSUV.indexOf(carroRemover);
 
-    if (index !== -1) {
-        carrosSUV.splice(index, 1);
-        alert(`Lista antiga de SUVs:`, carrosSUV.join(", "));
-        alert(`Nova lista de SUVs após a remoção:`, carrosSUV.join(", "));
+    if (carrosSUVNovo !== -1) {
+        carrosSUV.splice(carrosSUVNovo, 1);
+        alert(`Lista antiga de SUVs: ${carrosSUV.join(", ")}`);
+        alert(`Nova lista de SUVs após a remoção: ${carrosSUVNovo.join(", ")}`);
     } else {
-        alert(`Caracter invalido!`);
+        alert(`Caracter inválido!`);
     }
     //SAÍDA
 

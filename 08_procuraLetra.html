@@ -7,7 +7,17 @@
 
     //ENTRADA
 
+    const palavra = prompt("Digite uma palavra:");
+    const letraProcurada = prompt("Digite a letra que deseja encontrar na palavra:");
 
+    // Encontrar a posição da primeira ocorrência da letra na palavra (caso exista)
+    const primeiraPosicao = palavra.indexOf(letraProcurada);
+
+    if (primeiraPosicao !== -1) {
+        alert(`A letra '${letraProcurada}' foi encontrada na posição ${primeiraPosicao + 1} da palavra.`);
+    } else {
+        alert(`A letra '${letraProcurada}' não foi encontrada na palavra.`);
+    }
     //PROCESSAMENTO
 
 
